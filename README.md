@@ -1,4 +1,4 @@
-# modsecurity
+# Ingress nginx security test
 
 ```sh
 $ kubectl port-forward -n ingress-nginx --address=0.0.0.0 svc/ingress-nginx-controller 3000:80
