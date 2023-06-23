@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: modsecurity
+  name: modsecurity
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: modsecurity
+  template:
+    metadata:
+      labels:
+        app: modsecurity
+    spec:
+      containers:
+      - name: modsecurity
+        image: rayshoo/modsecurity-test:latest
+        imagePullPolicy: Always
